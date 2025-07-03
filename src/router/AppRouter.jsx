@@ -16,16 +16,21 @@ import ShiftSwapPage from "../pages/ShiftSwapPage.jsx";
 import ShiftSwapStatusPage from "../pages/ShiftSwapStatusPage.jsx";
 import ReportPage from "../pages/ReportPage.jsx";
 import Login from "../pages/Login.jsx";
-import ProfilePage from "../pages/ProfilePage.jsx";
 import ChangePasswordPage from "../pages/ChangePasswordPage.jsx";
 import ReportDashboard from "../pages/ReportDashboard.jsx";
+import { AuthProvider } from "../context/AuthContext.jsx";
+import ForgotPassword  from "../pages/ForgotPassword.jsx";
+import ViewEmployee from "../pages/ViewEmployee.jsx";
 
 const AppRouter = () => {
   return (
     <Router>
+      <AuthProvider>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword/>} />
+
 
         <Route element={<MainLayout />}>
           <Route path="/login" element={<Login />} />
@@ -38,11 +43,12 @@ const AppRouter = () => {
           <Route path="/shift/swap" element={<ShiftSwapPage />} />
           <Route path="/shift/swap-status" element={<ShiftSwapStatusPage />} />
           <Route path="/report" element={<ReportPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/employees/:id" element={<ViewEmployee/>}></Route>
           <Route path="/change-password" element={<ChangePasswordPage />} />
           <Route path="/report-dash" element={<ReportDashboard />} />
         </Route>
       </Routes>
+      </AuthProvider>
     </Router>
   );
 };
