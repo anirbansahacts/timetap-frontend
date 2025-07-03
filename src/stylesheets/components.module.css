@@ -1,0 +1,67 @@
+.navbar {
+  background-color: #222c4c;
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.navbarBrand a {
+  color: var(--text-light);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbarNav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbarNav li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.navbarNav li a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logoutButton {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 0.6rem 1rem;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}
+
+/* Card Styling for ViewEmployee */
+.card {
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 5px solid var(--primary-color);
+}
+
+.card p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card p strong {
+  color: var(--dark-color);
+  min-width: 120px; /* Align labels */
+  display: inline-block;
+}

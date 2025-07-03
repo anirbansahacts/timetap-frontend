@@ -1,0 +1,133 @@
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.homeContainer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.homeContainer h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.homeContainer p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.detailContainer {
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.detailContainer h2 {
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.loadingMessage,
+.errorMessage,
+.noDataMessage {
+  text-align: center;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.loadingMessage {
+  background-color: var(--info-color);
+  color: var(--text-light);
+}
+
+.errorMessage {
+  background-color: var(--danger-color);
+  color: var(--text-light);
+}
+
+.noDataMessage {
+  background-color: var(--warning-color);
+  color: var(--dark-color);
+}
+
+.notFoundContainer {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.notFoundContainer h1 {
+  font-size: 4rem;
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+.notFoundContainer p {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.backHomeButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.backHomeButton:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+/* In your detailContainer.module.css or a general styles file */
+
+.profileActions {
+  margin-top: 25px; /* Add some space above the link */
+  text-align: center; /* Center the link if it's the only one */
+  /* Or if you plan to have multiple actions side-by-side: */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* gap: 20px; */
+}
+
+.changePasswordLink {
+  display: inline-block; /* Make it block-like for padding/margin */
+  background-color: #007bff; /* Example: a primary blue background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.changePasswordLink:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.changePasswordLink:active {
+  transform: translateY(0); /* Press down effect */
+}
