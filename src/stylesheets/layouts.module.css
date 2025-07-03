@@ -131,3 +131,59 @@
 .changePasswordLink:active {
   transform: translateY(0); /* Press down effect */
 }
+
+
+/* New changes */
+
+/* layouts.module.css */
+
+.employeeDetailGrid {
+  display: grid;
+  /*
+   * Here's the key for alignment:
+   * 1st column (labels): fixed width (e.g., 150px or a larger value based on your longest label)
+   * 2nd column (values): takes up the rest of the available space (1fr)
+   */
+  grid-template-columns: 150px 1fr; /* Adjust 150px as needed for your longest label */
+  gap: 10px 15px; /* Row gap and column gap */
+  margin-bottom: 20px;
+  align-items: baseline; /* Vertically align items in the grid cells */
+}
+
+.detailLabel {
+  font-weight: bold;
+  text-align: left; /* <--- CRUCIAL CHANGE: Align labels to the left */
+  /* Remove padding-right if using grid gap for spacing */
+}
+
+.detailValue {
+  text-align: left; /* Keep values left-aligned */
+}
+
+/* Other existing styles for detailContainer, card, profileActions, changePasswordLink */
+.detailContainer {
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.profileActions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.changePasswordLink {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.changePasswordLink:hover {
+  background-color: #0056b3;
+}

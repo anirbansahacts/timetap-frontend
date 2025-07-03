@@ -3,9 +3,13 @@ import NavItem from "./NavItem";
 import SubMenu from "./SubMenu";
 import "../../stylesheets/Sidebar.css";
 import Logo from "../../assets/logo.svg?react";
+import { useAuth } from "../../context/AuthContext";
 
-const Sidebar = () => (
-  <div
+const Sidebar = () => {
+  
+  const { user } = useAuth();
+
+  return (<div
     className="d-flex flex-column position-fixed top-0 start-0 vh-100 p-3 w-25"
     style={{
       backgroundColor: "#222C4C",
@@ -34,11 +38,12 @@ const Sidebar = () => (
           <NavItem label="Shift Swap Status" link="/shift/swap-status" />
         </SubMenu>
         <NavItem label="Report" link="/report" />
-        <NavItem label="Profile" link="/profile" />
+        <NavItem label="Profile" link={`/employees/${user.employeeId}`} />        
         <NavItem label="Logout" link="/login" />
       </ul>
     </div>
   </div>
 );
+}
 
 export default Sidebar;
