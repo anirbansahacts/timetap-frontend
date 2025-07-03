@@ -25,7 +25,7 @@ const Sidebar = () => (
         <NavItem label="Attendance" link="/attendance" />
         <SubMenu label="Leave">
           <NavItem label="Apply Leave" link="/leave/apply" />
-          <NavItem label="Leave Status" link="/leave/status" />
+          <NavItem label="Leave Balance" link="/leave/balance" />
           <NavItem label="Leave History" link="/leave/history" />
         </SubMenu>
         <SubMenu label="Shift">

@@ -9,7 +9,7 @@ import MainLayout from "../components/layout/MainLayout.jsx";
 import DashboardPage from "../pages/DashboardPage.jsx";
 import AttendancePage from "../pages/AttendancePage.jsx";
 import LeaveApplyPage from "../pages/LeaveApplyPage.jsx";
-import LeaveStatusPage from "../pages/LeaveStatusPage.jsx";
+import LeaveBalancePage from "../pages/LeaveBalancePage.jsx";
 import LeaveHistoryPage from "../pages/LeaveHistoryPage.jsx";
 import ShiftDetailsPage from "../pages/ShiftDetailsPage.jsx";
 import ShiftSwapPage from "../pages/ShiftSwapPage.jsx";
@@ -32,7 +32,7 @@ const AppRouter = () => {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/attendance" element={<AttendancePage />} />
           <Route path="/leave/apply" element={<LeaveApplyPage />} />
-          <Route path="/leave/status" element={<LeaveStatusPage />} />
+          <Route path="/leave/balance" element={<LeaveBalancePage />} />
           <Route path="/leave/history" element={<LeaveHistoryPage />} />
           <Route path="/shift/details" element={<ShiftDetailsPage />} />
           <Route path="/shift/swap" element={<ShiftSwapPage />} />
