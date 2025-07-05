@@ -1,11 +1,17 @@
+// src/pages/ShiftDetailsPage.jsx
 import React from "react";
+import { Container, Row, Col } from 'react-bootstrap'; // Assuming you still want Bootstrap layout for consistency
+import ShiftDetails from '../components/shift/shift-details/ShiftDetails'; // Adjust the path as per your project structure
 
 const ShiftDetailsPage = () => {
   return (
-    <>
-      <div className=" fs-1 fw-light">Shift Details - Manager</div>
-      <p>Shift details...</p>
-    </>
+    <Container fluid className="my-3 poppins-font"> 
+      <Row className="justify-content-center">
+        <Col lg={12}>
+          <ShiftDetails />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
